@@ -7,8 +7,15 @@ import { styled } from '@mui/material/styles';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
-import { Box } from '@mui/material';
+import { Box, useTheme, useMediaQuery} from '@mui/material';
 import {Divider} from '@mui/material';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import LanguageIcon from '@mui/icons-material/Language';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import HelpIcon from '@mui/icons-material/Help';
+import PrivacyTipIcon from '@mui/icons-material/PrivacyTip';
+import IosShareIcon from '@mui/icons-material/IosShare';
+import Sidebar from "../componennts/SideBar"
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     width: 62,
@@ -60,10 +67,14 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 
 export default function Profile(){
         
-
+    const theme = useTheme();
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
     return(
-        <Container>
-        <Paper style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '16px', backgroundColor:"#121926" }}>
+        <Box>
+            <Sidebar/>
+            <Container sx={{marginLeft: { xs: 'auto', sm: isSmallScreen ? 'auto' : 35 }}}>
+
+        <Paper style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '16px', backgroundColor:"#0D121D", borderTopLeftRadius:"15px",borderTopRightRadius:"15px" }}>
             <div>
                 <Typography variant={"h3"} sx={{color:"white"}}>
                     Profile
@@ -84,11 +95,12 @@ export default function Profile(){
 
 
         <Divider/>
-        <Paper sx={{backgroundColor:"#121926"}}>
+        <Container  sx={{backgroundColor:"#0D121D", padding:"1%"}}>
+        <Paper sx={{backgroundColor:"#0D121D"}}>
             <Typography variant='h5' sx={{color:"white"}}>
                 Account
             </Typography>       
-        <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: 'center', backgroundColor:"#121926"}}>
+        <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: 'center', backgroundColor:"#0D121D"}}>
             
             <Typography variant='subtitle1' sx={{color:"white"}}>
                 Switch To Light mode
@@ -101,48 +113,68 @@ export default function Profile(){
         </Box>
         </Paper>
         <Divider/>
-        <Paper sx={{backgroundColor:"#121926"}}>
-        <select style={{width: "100%", marginBottom: '16px', height: "100%;",padding:"20px", borderRadius:"5px", fontSize: "16px",backgroundColor: "#121926", color: "white"}}>
-            <option selected value="Country">Country</option>
-        </select>
+        <Paper sx={{backgroundColor:"#0D121D"}}>
+                <label htmlFor="copy-button">
+                    <LanguageIcon id="left-icon" />
+                    <input name="copy-button" aria-label="copy-button" placeholder="Country" />
+                    <ArrowForwardIosIcon id="right-icon" />
+                </label>
+
         </Paper>        
         <Divider/>
-        <Paper sx={{backgroundColor:"#121926"}}>
-        <select style={{width: "100%", height: "100%;",padding:"20px", borderRadius:"5px", fontSize: "16px",backgroundColor: "#121926", color: "white"}}>
-            <option selected value="Country">Edit Profile</option>
-        </select>
+        <Paper sx={{backgroundColor:"#0D121D"}}>
+        <label htmlFor="copy-button">
+                    <AccountCircleIcon id="left-icon" />
+                    <input name="copy-button" aria-label="copy-button" placeholder="Edit Profile" />
+                    <ArrowForwardIosIcon id="right-icon" />
+                </label>
+
         </Paper> 
 
      
         <Divider/>
-        <Paper sx={{backgroundColor:"#121926", marginTop: '16px', borderRadius:"5px"}}>
+        <Paper sx={{backgroundColor:"#0D121D", marginTop: '16px', borderRadius:"5px"}}>
             <Typography variant='h5' sx={{color:"white"}}>
                 General
             </Typography>       
         
         </Paper>
         <Divider/>
-        <Paper sx={{backgroundColor:"#121926"}}>
-        <select style={{width: "100%", marginBottom: '16px',height: "100%;",padding:"20px", borderRadius:"5px", fontSize: "16px",backgroundColor: "#121926", color: "white"}}>
-            <option selected value="Support">Support</option>
-        </select>
+        <Paper sx={{backgroundColor:"#0D121D"}}>
+        <label htmlFor="copy-button">
+                    <HelpIcon id="left-icon" />
+                    <input name="copy-button" aria-label="copy-button" placeholder="Support" />
+                    <ArrowForwardIosIcon id="right-icon" />
+                </label>
+
         </Paper>        
 
         <Divider/>
-        <Paper sx={{backgroundColor:"#121926"}}>
-        <select style={{width: "100%",marginBottom: '16px', height: "100%;",padding:"20px", borderRadius:"5px", fontSize: "16px",backgroundColor: "#121926", color: "white"}}>
-            <option selected value="Terms of Services">Terms of Services</option>
-        </select>
+        <Paper sx={{backgroundColor:"#0D121D"}}>
+        <label htmlFor="copy-button">
+                    <PrivacyTipIcon id="left-icon" />
+                    <input name="copy-button" aria-label="copy-button" placeholder="Terms and Services" />
+                    <ArrowForwardIosIcon id="right-icon" />
+                </label>
+
         </Paper> 
 
         <Divider/>
-        <Paper sx={{backgroundColor:"#121926"}}>
-        <select style={{width: "100%", height: "100%;",padding:"20px", borderRadius:"5px", fontSize: "16px",backgroundColor: "#121926", color: "white"}}>
-            <option selected value="Invite Friends">Invite Friends</option>
-        </select>
+        <Paper sx={{backgroundColor:"#0D121D"}}>
+        <label htmlFor="copy-button">
+            <IosShareIcon id="left-icon" />
+                <input name="copy-button" aria-label="copy-button" placeholder="Invire Friend" />
+            <ArrowForwardIosIcon id="right-icon" />
+        </label>
+
         </Paper> 
 
 
+        </Container>
+        
+
     </Container>
+        </Box>
+        
     )
 }

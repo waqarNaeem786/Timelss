@@ -10,6 +10,9 @@ import CreateProfile from './LoginForm/Creatp.js';
 import HomePage from './HomePage.js'
 import Courses from './Dashboard/Courses.js'
 import Profile from './Dashboard/Profile.js';
+import String from "./Dashboard/Strings.js"
+import Pin from './Dashboard/Pin.js';
+import Scan from './Dashboard/Scan.js'
 
 export default function AppRoutes() {
     return (
@@ -23,7 +26,9 @@ export default function AppRoutes() {
                 <Route path="/Dashboard" element={<HomePage />} />
                 <Route path="/Courses" element={<Courses />} />
                 <Route path="/Profile" element={<Profile />} />
-
+                <Route path="/String" element={<String />} />
+                <Route path="/Pin" element={<Pin />} />
+                <Route path="/Scan" element={<Scan />} />
 
             </Routes>
         </Router>

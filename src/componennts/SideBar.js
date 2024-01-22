@@ -45,63 +45,92 @@ export default function SideBar(props) {
     <div>
       <Toolbar />
             <div style={{ display: 'flex', alignItems: 'center' }}>
-                <img style={{ width: 50, height: 50 }} src={timeless} alt="Timeless Logo" />
-                <Typography variant="h5" sx={{ color: 'white', marginLeft: 2 }}>
+                <img style={{ width: 80, height: 80 }} src={timeless} alt="Timeless Logo" />
+                <Typography variant="h5" sx={{ color: 'white', }}>
                     Timeless
                 </Typography>
             </div>
 
+        <br/>
         <Divider />
+        <Typography sx={{color: "lightgray"}} variant="p">
+            Menu
+        </Typography>
       <List sx={{ color: 'white' }}>
-            <ListItemButton>
+            <ListItemButton sx={{ '&:hover': { backgroundColor: '#121926',borderRadius: 5 } }}>
                 <ListItemIcon sx={{ color: 'white' }}>
-                    <LeaderboardIcon />
+                    <LeaderboardIcon sx={{ '&:hover': { color: '#FF1A5B' } }}/>
                 </ListItemIcon>
                 <ListItemText primary="Dashboard" />
             </ListItemButton>
 
-            <ListItemButton>
+            <ListItemButton sx={{ '&:hover': { backgroundColor: '#121926',borderRadius: 5 } }}>
                 <ListItemIcon sx={{ color: 'white' }}>
-                    <SearchIcon/>
+                    <SearchIcon sx={{ '&:hover': { color: '#FF1A5B' } }}/>
                 </ListItemIcon>
                 <ListItemText primary="Scan" />
             </ListItemButton>
 
-            <ListItemButton>
+            <ListItemButton sx={{ '&:hover': { backgroundColor: '#121926',borderRadius: 5 } }}>
                 <ListItemIcon sx={{ color: 'white' }}>
-                    <MenuBookIcon/>
+                    <MenuBookIcon sx={{ '&:hover': { color: '#FF1A5B' } }}/>
                 </ListItemIcon>
                 <ListItemText primary="String" />
             </ListItemButton>
 
-            <ListItemButton>
+            <ListItemButton sx={{ '&:hover': { backgroundColor: '#121926',borderRadius: 5 } }}>
                 <ListItemIcon sx={{ color: 'white' }}>
-                    <SettingsBackupRestoreIcon/>
-                </ListItemIcon>
+                    <SettingsBackupRestoreIcon sx={{ '&:hover': { color: '#FF1A5B' } }} />
+                </ListItemIcon >
                 <ListItemText primary="Changelog" />
             </ListItemButton>
 
-            <ListItemButton>
+            <ListItemButton sx={{ '&:hover': { backgroundColor: '#121926',borderRadius: 5 } }}>
                 <ListItemIcon sx={{ color: 'white' }}>
-                    <GroupIcon/>
+                    <GroupIcon sx={{ '&:hover': { color: '#FF1A5B' } }}/>
                 </ListItemIcon>
                 <ListItemText primary="Manage Team" />
             </ListItemButton>
 
-            <ListItemButton>
+            <ListItemButton sx={{ '&:hover': { backgroundColor: '#121926',borderRadius: 5 } }}>
                 <ListItemIcon sx={{ color: 'white' }}>
-                    <SchoolIcon/>
+                    <SchoolIcon sx={{ '&:hover': { color: '#FF1A5B' } }}/>
                 </ListItemIcon>
                 <ListItemText primary="Purchase" />
             </ListItemButton>
 
-            <ListItemButton>
+            <ListItemButton sx={{ '&:hover': { backgroundColor: '#121926', borderRadius: 5 } }}>
                 <ListItemIcon sx={{ color: 'white' }}>
-                    <AccountCircleIcon/>
+                    <AccountCircleIcon sx={{ '&:hover': { color: '#FF1A5B' } }}/>
                 </ListItemIcon>
                 <ListItemText primary="Profile" />
             </ListItemButton>
             </List>
+
+            <Divider/>
+
+            <div style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              position: "relative",
+              top: "10%",
+              backgroundColor:"#121926",
+              padding:"5%",
+              borderRadius:"15%",
+              
+              }}>
+              <div style={{display:"flex"}}>
+                <AccountCircleIcon sx={{color:"white"}}/>
+                <h5 style={{color:"white"}}>Alex</h5>
+              </div>
+              
+              <Divider style={{color:"white"}}/>
+              <h5 style={{color:"white"}}>License Info</h5>
+              <p style={{color:"white"}}>Your License: Coustomer</p>
+              <Divider sx={{color:"white"}}/>
+              <h5 style={{color:"white"}}>Logout</h5>
+            </div>
      
     </div>
   );
@@ -139,7 +168,7 @@ export default function SideBar(props) {
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth,  backgroundColor:'#121926' },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth,  backgroundColor:'#0D121D' },
           }}
         >
             <Toolbar>
@@ -163,7 +192,7 @@ export default function SideBar(props) {
           variant="permanent"
           sx={{
             display: { xs: 'none', sm: 'block' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth,backgroundColor:'#121926' },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth,backgroundColor:'#0D121D' },
           }}
           open
         >

@@ -12,7 +12,13 @@ import CodeIcon from '@mui/icons-material/Code';
 export default function CourseColumn() {
   return (
     <Container sx={{ paddingY: 2 }}>
-      <Grid container spacing={2}>
+      <div style={{ marginBottom: '20px' }}>
+        <Typography variant="h5">
+          Your Top Classes
+        </Typography>
+      </div>
+
+      <Grid container spacing={2} sx={{ backgroundColor: "#0D121D" }}>
         <Grid item xs={12} sm={6} md={6} lg={4}>
           <Card sx={{ borderRadius: 2, width: '100%' }}>
             <CardContent sx={{ backgroundColor: "#FF1A5B" }}>

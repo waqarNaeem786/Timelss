@@ -15,14 +15,15 @@ export default function SearchWelcome() {
                     <Typography variant={'p'} sx={{ color: 'gray' }}>
                         Get a little overview about your account
                     </Typography>
-
+                     <br/>  
                     <Typography variant={'p'} sx={{ color: 'white' }}>
-                        Your subscription status is <Typography sx={{ color: '#04A24C' }}>Active</Typography>
+                        Your subscription status is 
                     </Typography>
+                    <Typography variant={'p'} sx={{ color: '#04A24C', paddingLeft:"10px" }}>Active</Typography>
                 </CardContent>
             </Card>
 
-                <Card sx={{ backgroundColor: '#121926', padding: 2, borderRadius: 5, width: "auto" }}>
+                <Card sx={{ backgroundColor: '#0D121D', padding: 2, borderRadius: 5, width: "auto" }}>
                 <CardContent>
                     <Typography variant={'h5'} sx={{ color: 'white' }}>
                         Total Scan Count
@@ -33,8 +34,8 @@ export default function SearchWelcome() {
                     </Typography>
 
                     <div style={{ display: 'flex', alignItems: 'center', color: 'white' }}>
-                        <SearchIcon sx={{ color: '#6436C1', marginRight: 1 }} />
-                        <Typography>
+                    <SearchIcon sx={{ color: '#6436C1', marginRight: 1, fontSize: '50px' }} />
+                        <Typography sx={{fontSize: '40px' }}>
                             42.138
                         </Typography>
                     </div>

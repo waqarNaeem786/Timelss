@@ -1,9 +1,9 @@
 import React from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import Input from '@mui/material/Input';
 
 export default function PhoneSignIn() {
     const containerStyle = {
@@ -12,7 +12,7 @@ export default function PhoneSignIn() {
         alignItems: 'center',
         justifyContent: 'center',
         minHeight: '100vh',
-        position: 'relative', // Added position relative
+        position: 'relative',
     };
 
     const formStyle = {
@@ -21,16 +21,21 @@ export default function PhoneSignIn() {
         marginTop: '20px',
     };
 
-    const textFieldStyle = {
+    const inputStyle = {
         width: '100%',
         marginBottom: '20px',
-        borderRadius: '10px',
+        borderRadius: '50px',
+        color: 'gray',
+        backgroundColor: '#0D121D',
+        padding: '16px',
+        fontSize: '16px',
+        border: '1px solid #121926', // Added border to match the padding
     };
 
     const backButtonStyle = {
-        position: 'absolute', // Changed position to absolute
+        position: 'absolute',
         left: '10px',
-        top: '35%', // Adjusted top value
+        top: '35%',
         cursor: 'pointer',
     };
 
@@ -47,21 +52,18 @@ export default function PhoneSignIn() {
                 <Typography variant="h3" align="center" gutterBottom>
                     Phone Sign In
                 </Typography>
-                <Typography variant="body1" align="center" paragraph>
+                <Typography variant="body1" paragraph>
                     Type in your phone number below to register.
                 </Typography>
 
-                <TextField
+                <Input
                     required
                     fullWidth
-                    id="outlined-required"
-                    label="Your Phone Number"
                     placeholder="Please enter a valid number"
-                    style={textFieldStyle}
-                    variant="outlined"
+                    style={inputStyle}
                 />
 
-                <Button fullWidth variant="contained" style={signInButtonStyle}>
+                <Button variant="contained" style={signInButtonStyle}>
                     Sign In with Phone
                 </Button>
             </div>

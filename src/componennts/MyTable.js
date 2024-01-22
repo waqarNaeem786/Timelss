@@ -7,6 +7,8 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import ListItemIcon  from '@mui/material/ListItemIcon';
 
 const teamData = [
     { memberName: 'John Doe', email: 'john@example.com', lastActive: '2022-01-01', dateCreated: '2021-12-01', status: 'Active' },
@@ -16,10 +18,10 @@ const teamData = [
     { memberName: 'Charlie Wilson', email: 'charlie@example.com', lastActive: '2022-05-05', dateCreated: '2022-02-05', status: 'Inactive' },
 ];
 
-export default function MyTeamTable() {
+export default function MyTable() {
     return (
-        <TableContainer component={Paper} sx={{ backgroundColor: '#121926', marginTop: 2, borderTopLeftRadius: 5, borderTopRightRadius: 5 }}>
-            <Typography variant="h5" sx={{ color: 'gray', padding: 2 }}>
+        <TableContainer component={Paper} sx={{ backgroundColor: '#0D121D', marginTop: 2, borderTopLeftRadius: 5, borderTopRightRadius: 5 }}>
+            <Typography variant="h5" sx={{ color: 'white', padding: 2 }}>
                 My Team
             </Typography>
             <Table>
@@ -35,7 +37,12 @@ export default function MyTeamTable() {
                 <TableBody>
                     {teamData.map((row, index) => (
                         <TableRow key={index}>
-                            <TableCell sx={{ color: 'white' }}>{row.memberName}</TableCell>
+                            <TableCell sx={{ color: 'white' }}>
+                                <ListItemIcon>
+                                    <AccountCircleIcon sx={{ color: 'white' }} />
+                                </ListItemIcon>
+                                {row.memberName}
+                            </TableCell>
                             <TableCell sx={{ color: 'white' }}>{row.email}</TableCell>
                             <TableCell sx={{ color: 'white' }}>{row.lastActive}</TableCell>
                             <TableCell sx={{ color: 'white' }}>{row.dateCreated}</TableCell>

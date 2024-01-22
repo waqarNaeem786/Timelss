@@ -8,6 +8,8 @@ import GoogleIcon from '@mui/icons-material/Google';
 import AppleIcon from '@mui/icons-material/Apple';
 import PhoneIcon from '@mui/icons-material/Phone';
 import timeless from '../assets/timless.png'
+import InputLabel from '@mui/material/InputLabel';
+
 
 export default function SignIn() {
     const jaldiFontStyle = {
@@ -23,14 +25,15 @@ export default function SignIn() {
     };
 
     const inputFieldStyle = {
+        width:"100px", 
         marginBottom: '20px',
-        padding: '10px', // Added padding
-        border: '1px solid gray', // Added gray border
-        borderRadius: '10px', // Rounded corners
+        padding: '10px', 
+        borderRadius: '50px', 
         width: '100%',
-        boxSizing: 'border-box', // Ensure padding and border are included in the width
+        boxSizing: 'border-box', 
         color: 'gray',
-        backgroundColor: '#121926',
+        backgroundColor: '#0D121D',
+        border: 'none', 
         padding: 16,
         fontSize: 16,
         '&::placeholder': {
@@ -68,13 +71,14 @@ export default function SignIn() {
     };
 
     const iconStyle = {
-        fontSize: 40,
-        color: 'white', // Change the color as needed
+        fontSize: 35,
+        color: 'white', 
         cursor: 'pointer',
-        margin: '0 10px', // Added space around icons
-        border: '1px solid gray', // Added gray border
-        borderRadius: '10px', // Rounded corners
+        margin: '0 10px', 
+        border: '5px solid #0D121D', 
+        borderRadius: '10px', 
         padding: '5px',
+       
     };
 
     const createAccountTextStyle = {
@@ -86,8 +90,8 @@ export default function SignIn() {
         <Container component="div" maxWidth="xs" style={containerStyle}>
             <div>
             <div style={{ display: 'flex', alignItems: 'center', margin:"20px" }}>
-                <img style={{ width: 60, height: 60 }} src={timeless} alt="Timeless Logo" />
-                <Typography variant="h3" sx={{ color: 'white', marginLeft: 2 }}>
+                <img style={{ width: 80, height: 80 }} src={timeless} alt="Timeless Logo" />
+                <Typography variant="h4" sx={{ color: 'white', marginLeft: 2 }}>
                     Timeless
                 </Typography>
             </div>
@@ -98,6 +102,9 @@ export default function SignIn() {
                     Use the form below to access your account.
                 </Typography>
 
+                <InputLabel htmlFor="email" style={{ color: 'gray', fontSize:"14px"}}>
+                    Email Address
+                </InputLabel>
                 <input
                     required
                     type="text"
@@ -105,11 +112,15 @@ export default function SignIn() {
                     style={inputFieldStyle}
                 />
 
+                <InputLabel htmlFor="password" style={{ color: 'gray', fontSize:"14px"}}>
+                    Password
+                </InputLabel>
                 <input
                     required
                     type="password"
                     placeholder="Enter Password here ..."
                     style={inputFieldStyle}
+                    sx={{width:'100%'}}
                 />
 
 

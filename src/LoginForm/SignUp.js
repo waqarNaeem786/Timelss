@@ -7,6 +7,8 @@ import GoogleIcon from '@mui/icons-material/Google';
 import AppleIcon from '@mui/icons-material/Apple';
 import PhoneIcon from '@mui/icons-material/Phone';
 import timeless from '../assets/timless.png'
+import InputLabel from '@mui/material/InputLabel';
+
 export default function SignUp() {
     const jaldiFontStyle = {
         fontFamily: 'Jaldi, sans-serif',
@@ -22,15 +24,15 @@ export default function SignUp() {
 
     const inputFieldStyle = {
         marginBottom: '20px',
-        padding: '10px', // Added padding
-        border: '1px solid gray', // Added gray border
+        border: 'none', // Added gray border
         borderRadius: '10px', // Rounded corners
         width: '100%',
         boxSizing: 'border-box', // Ensure padding and border are included in the width
         color: 'gray',
-        backgroundColor: '#121926',
+        backgroundColor: '#0D121D',
         padding: 16,
-        fontSize: 16,
+        fontSize: 15,
+        borderRadius: 50,
         '&::placeholder': {
             color: 'gray',
         },
@@ -58,7 +60,7 @@ export default function SignUp() {
     };
 
     const iconStyle = {
-        fontSize: 40,
+        fontSize: 20,
         color: 'white', // Change the color as needed
         cursor: 'pointer',
         margin: '0 10px', // Added space around icons
@@ -76,8 +78,8 @@ export default function SignUp() {
         <Container component="div" maxWidth="xs" style={containerStyle}>
             <div>
             <div style={{ display: 'flex', alignItems: 'center', margin:"20px" }}>
-                <img style={{ width: 60, height: 60 }} src={timeless} alt="Timeless Logo" />
-                <Typography variant="h3" sx={{ color: 'white', marginLeft: 2 }}>
+                <img style={{ width: 80, height: 80 }} src={timeless} alt="Timeless Logo" />
+                <Typography variant="h4" sx={{ color: 'white', marginLeft: 2 }}>
                     Timeless
                 </Typography>
             </div>
@@ -88,7 +90,9 @@ export default function SignUp() {
                 <Typography variant="body1" style={{ ...jaldiFontStyle, marginBottom: '20px', color: 'gray' }}>
                     Create an account by using the form below.
                 </Typography>
-
+                <InputLabel htmlFor="email" style={{ color: 'gray', fontSize:"14px"}}>
+                    Email Address
+                </InputLabel>
                 <input
                     required
                     type="text"
@@ -96,6 +100,9 @@ export default function SignUp() {
                     style={inputFieldStyle}
                 />
 
+                <InputLabel htmlFor="password" style={{ color: 'gray', fontSize:"14px"}}>
+                    Password
+                </InputLabel>
                 <input
                     required
                     type="password"
@@ -104,6 +111,9 @@ export default function SignUp() {
                 />
 
                 <Grid container spacing={2} style={{ marginBottom: '20px' }}>
+                <Grid item xs={6} >
+                       
+                    </Grid>
                     <Grid item xs={6} justifyContent={"flex-end"}>
                         {/* "SignUp" Button */}
                         <Button  fullWidth variant="contained" color="primary" style={signInButtonStyle}>

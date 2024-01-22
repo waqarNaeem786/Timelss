@@ -1,8 +1,55 @@
 body {
-    background-color: #0D121D;
+    background-color: #121926;
     color: white;
+    font-family: sans-serif, jaldi;
 }
 
 .sidebar{
     background-color: #0D121D;
 }
+
+.CircularProgressbar-text text{
+    font-weight: 200;
+}
+
+label {
+  display: flex;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+#left-icon {
+  position: absolute;
+  left: 12px;
+  top: 16px;
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+input {
+  width: 100%;
+  border-radius: 10px;
+  padding: 20px;
+  padding-left: 40px; /* Adjusted padding-left for the left icon */
+  font-size: 16px;
+  text-overflow: ellipsis;
+  background-color: #0D121D;
+  border: 2px solid gray;
+  color: white;
+}
+
+input::placeholder {
+  color: white;
+}
+
+#right-icon {
+  position: absolute;
+  right: 12px;
+  top: 16px;
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+  

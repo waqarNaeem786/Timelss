@@ -1,11 +1,10 @@
 import React from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 
-export default function Creatp() {
+export default function CreateProfile() {
     const containerStyle = {
         display: 'flex',
         flexDirection: 'column',
@@ -21,10 +20,16 @@ export default function Creatp() {
         textAlign: 'center',
     };
 
-    const textFieldStyle = {
+    const inputStyle = {
         width: '100%',
         marginBottom: '20px',
         borderRadius: '10px',
+        color: 'gray',
+        backgroundColor: '#0D121D',
+        padding: '16px',
+        fontSize: '16px',
+        border: 'none',
+        outline: 'none',
     };
 
     const iconStyle = {
@@ -50,36 +55,28 @@ export default function Creatp() {
                 </Typography>
                 <PersonOutlineOutlinedIcon style={iconStyle} />
 
-                <TextField
-                    fullWidth
-                    id="outlined-required"
+                <input
+                    type="text"
                     placeholder="Your Name"
-                    style={textFieldStyle}
-                    variant="outlined"
+                    style={inputStyle}
                 />
 
-                <TextField
-                    fullWidth
-                    id="outlined-required"
+                <input
+                    type="text"
                     placeholder="Your City"
-                    style={textFieldStyle}
-                    variant="outlined"
+                    style={inputStyle}
                 />
-                <TextField
-                    required
-                    fullWidth
-                    id="outlined-required"
+
+                <input
+                    type="text"
                     placeholder="Your State"
-                    style={textFieldStyle}
-                    variant="outlined"
+                    style={inputStyle}
                 />
-                <TextField
-                    required
-                    fullWidth
-                    id="outlined-required"
+
+                <input
+                    type="text"
                     placeholder="Bio"
-                    style={textFieldStyle}
-                    variant="outlined"
+                    style={inputStyle}
                 />
 
                 <Button fullWidth variant="contained" style={signInButtonStyle}>

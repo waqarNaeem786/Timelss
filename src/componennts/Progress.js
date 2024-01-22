@@ -1,11 +1,12 @@
 import Paper from '@mui/material/Paper';
 import Typography from "@mui/material/Typography";
-import CircularProgress from '@mui/material/CircularProgress';
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 
 export default function Progress() {
     return (
         <div>
-            <Paper square={false} sx={{ backgroundColor: '#121926', padding: 2, borderRadius: 5, height: 280 }}>
+            <Paper square={false} sx={{ backgroundColor: '#0D121D', padding: 2, borderRadius: 5, height: 280 }}>
                 <Typography variant={'h5'} sx={{ color: 'white' }}>
                     Scan Summary
                 </Typography>
@@ -14,40 +15,55 @@ export default function Progress() {
                     An overview of your scans
                 </Typography>
 
-                <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 40, width:"auto" }}>
-                    <div style={{ textAlign: 'center', backgroundColor: '#121926', padding: 5, borderRadius: '50%',width:"auto" }}>
-                        <CircularProgress
-                            variant="determinate"
+                <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 40, width: "auto" }}>
+
+                    <div style={{ width: 150, height: 150 }}>
+                        <CircularProgressbar
                             value={58}
-                            size={80}
-                            sx={{ color: '#E22303', backgroundColor: '#121926' }}
+                            text={"58%"}
+                            styles={buildStyles({
+                                strokeLinecap: 'round',
+                                // Colors
+                                pathColor: `rgba(226, 35, 3)`,
+                                textColor: 'white',
+                                trailColor: '#212C36',
+                                backgroundColor: '#3e98c7',
+                                textSize: '20px', // Adjust text size
+                            })}
                         />
-                        <Typography variant="body2" sx={{ color: 'white', marginTop: 1 }}>
-                            58%
-                        </Typography>
                     </div>
-                    <div style={{ textAlign: 'center', backgroundColor: '#121926', padding: 5, borderRadius: '50%',width:"auto" }}>
-                        <CircularProgress
-                            variant="determinate"
+
+                    <div style={{ width: 150, height: 150 }}>
+                        <CircularProgressbar
                             value={23}
-                            size={80}
-                            sx={{ color: '#E09A00', backgroundColor: '#121926' }}
+                            text={"23%"}
+                            styles={buildStyles({
+                                strokeLinecap: 'round',
+                                // Colors
+                                pathColor: `rgba(224, 154, 0)`,
+                                textColor: 'white',
+                                trailColor: '#212C36',
+                                textSize: '20px',
+                            })}
                         />
-                        <Typography variant="body2" sx={{ color: 'white', marginTop: 1 }}>
-                            23%
-                        </Typography>
                     </div>
-                    <div style={{ textAlign: 'center', backgroundColor: '#121926', padding: 5, borderRadius: '50%', width:"auto" }}>
-                        <CircularProgress
-                            variant="determinate"
+
+                    <div style={{ width: 150, height: 150 }}>
+                        <CircularProgressbar
                             value={19}
-                            size={80}
-                            sx={{ color: '#10DA2E', backgroundColor: '#121926' }}
+                            text={"19%"}
+                            styles={buildStyles({
+                                strokeLinecap: 'round',
+                                // Colors
+                                pathColor: `rgba(16, 218, 46)`,
+                                textColor: 'white',
+                                trailColor: '#212C36',
+                                backgroundColor: '#3e98c7',
+                                textSize: '20px',
+                            })}
                         />
-                        <Typography variant="body2" sx={{ color: 'white', marginTop: 1 }}>
-                            19%
-                        </Typography>
                     </div>
+
                 </div>
             </Paper>
         </div>
