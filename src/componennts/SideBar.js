@@ -18,6 +18,7 @@ import Toolbar from '@mui/material/Toolbar';
 import MenuIcon from '@mui/icons-material/Menu';
 import "../index.css"
 import timeless from "../assets/timless.png"
+import { Link } from "react-router-dom";
 
 
 const drawerWidth = 240;
@@ -61,28 +62,37 @@ export default function SideBar(props) {
                 <ListItemIcon sx={{ color: 'white' }}>
                     <LeaderboardIcon sx={{ '&:hover': { color: '#FF1A5B' } }}/>
                 </ListItemIcon>
-                <ListItemText primary="Dashboard" />
+                <Link to={'/Dashboard'}>
+                <ListItemText primary="Dashboard" />                
+                </Link>
             </ListItemButton>
 
             <ListItemButton sx={{ '&:hover': { backgroundColor: '#121926',borderRadius: 5 } }}>
                 <ListItemIcon sx={{ color: 'white' }}>
                     <SearchIcon sx={{ '&:hover': { color: '#FF1A5B' } }}/>
                 </ListItemIcon>
-                <ListItemText primary="Scan" />
+                <Link to={'/Scan'}>
+                  <ListItemText primary="Scan" />
+                </Link>
             </ListItemButton>
 
             <ListItemButton sx={{ '&:hover': { backgroundColor: '#121926',borderRadius: 5 } }}>
                 <ListItemIcon sx={{ color: 'white' }}>
                     <MenuBookIcon sx={{ '&:hover': { color: '#FF1A5B' } }}/>
                 </ListItemIcon>
-                <ListItemText primary="String" />
+                <Link to={'/String'}>
+                <ListItemText primary="String" />                
+                </Link>
             </ListItemButton>
 
             <ListItemButton sx={{ '&:hover': { backgroundColor: '#121926',borderRadius: 5 } }}>
                 <ListItemIcon sx={{ color: 'white' }}>
                     <SettingsBackupRestoreIcon sx={{ '&:hover': { color: '#FF1A5B' } }} />
                 </ListItemIcon >
+                <Link to={'/Pin'}>
                 <ListItemText primary="Changelog" />
+                </Link>
+                
             </ListItemButton>
 
             <ListItemButton sx={{ '&:hover': { backgroundColor: '#121926',borderRadius: 5 } }}>
@@ -103,7 +113,9 @@ export default function SideBar(props) {
                 <ListItemIcon sx={{ color: 'white' }}>
                     <AccountCircleIcon sx={{ '&:hover': { color: '#FF1A5B' } }}/>
                 </ListItemIcon>
+                <Link to={'/Profile'}>
                 <ListItemText primary="Profile" />
+                </Link>
             </ListItemButton>
             </List>
 

@@ -24,7 +24,6 @@ export default function AppRoutes() {
                 <Route path="/forgetpassword" element={<Forgetpassword />} />
                 <Route path="/createprofile" element={<CreateProfile />} />
                 <Route path="/Dashboard" element={<HomePage />} />
-                <Route path="/Courses" element={<Courses />} />
                 <Route path="/Profile" element={<Profile />} />
                 <Route path="/String" element={<String />} />
                 <Route path="/Pin" element={<Pin />} />
